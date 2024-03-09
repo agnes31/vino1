@@ -1,0 +1,122 @@
+
+.navi>div>*+* {
+	margin-top: 13px;
+}
+
+/* Navigation principale */
+
+.navi {
+	text-align: center;
+}
+
+.navi a {
+	font-size: 16px;
+	text-decoration: none;
+	color: var(--color-white);
+}
+
+
+/* Menu hamburger */
+
+@media (max-width: 700px) {
+
+	/* Menu */
+
+	.navi {
+		position: absolute; 
+		top: 0;
+		right: 0;
+
+	}
+
+	/* Menu déroulant */
+
+	.navi>div {
+		
+		position: fixed;
+		padding: 7px;
+		padding-top: 38px;
+		padding-bottom: 38px;
+		border-radius: 15px;
+		background-color: var(--color-brown);	
+		right: 0;
+		bottom: 318px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		transition: 200ms ease-in-out;
+		transition-property: opacity, transform;
+		z-index: 5; 	
+
+	}
+
+	.navi a {
+		display: block;
+	}
+
+
+	.navi>input[type="checkbox"] {
+		display: inline-block;
+		margin: 11px;
+		margin-top: 13px;
+		appearance: none;
+		position: relative;
+		z-index: 1;
+	}
+
+	.navi>input[type="checkbox"]:before {
+		content: "Fermer";
+		color: var(--color-white);
+		padding: 10px;
+	}
+
+	.navi>input[type="checkbox"]:not(:checked):before {
+		content: "Ouvrir";
+		color: var(--color-white);
+		
+	}
+		
+	.navi>input[type="checkbox"]:not(:checked)+div {
+		opacity: 0;
+		pointer-events: none;
+		transform: scale(.95);
+	}
+}
+
+@media (min-width: 700px) { .navi>input {
+		display: none;
+	}
+
+	.navi {
+		margin-bottom: 40px;
+	}
+
+	.navi a+a {
+		margin-left: 20px;
+	}
+}
+
+/* LOGO */
+a .mdi-liquor {
+    font-size: 24px; 
+	color: var(--color-white);
+}
+
+a .mdi-magnify {
+	font-size: 24px;
+	color: var(--color-white);
+}
+
+a .mdi-emoticon-outline {
+	font-size: 24px;
+	color: var(--color-white); 
+}
+
+a .mdi-logout {
+	font-size: 24px;
+	color: white; 
+}
+
+.nav-link span{
+    float: left;
+}

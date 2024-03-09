@@ -1,0 +1,193 @@
+/* LAYOUT */
+/* use */
+.login {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* use */
+.container {
+    position: relative; 
+    height: 500px; 
+    overflow: hidden;
+}
+/* use */
+.background-image {
+    position: absolute;
+    /* top: -4rem; */
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/logo-vigne.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+/* use  dans auth.blade.php*/
+.login_logo_form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* use  dans auth.blade.php*/
+.login_logo_form {
+    margin-top: 40%;
+    top:auto;
+    width: 100%;
+    height: auto;
+ 
+}
+
+/* use*/
+.auth-containe {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    position: absolute;
+    bottom: 4rem;
+}
+
+
+/* LOGO */
+
+
+/* use */
+.site-logo_auth {
+    width: 260px;
+    position: absolute;
+    top: 190px;
+    left: 50%;
+    transform: translate(-97%, -27%);
+}
+
+/* use */
+.site-logo_welcome {
+    width: 260px;
+    position: absolute;
+    top: 190px;
+    left: 50%;
+    transform: translate(-53%, -49%);
+}
+
+.site-logo_header {
+    width: 260px;
+    position: absolute;
+    top: 414px;
+    left: 50%;
+    transform: translate(-103%, -70%);
+}
+
+/* user */
+.input_lign {
+    position: relative;
+    z-index: 2; 
+
+
+}
+
+/* user  peut etre pas*/
+.log_mail {  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative; 
+    z-index: 2;
+}
+
+/* FORM AUTH */
+
+/* use */
+.background-auth {
+    position: absolute; 
+    top: -1rem;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-image: url('/img/auth/vigne-login.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+}   
+
+/* use */
+.form_container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding-bottom: 2rem;
+    padding-top: 13rem;
+
+}
+/* use */
+.title_container {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}   
+
+/* pasencore */
+
+.button_form {
+    color: var( --color-dark-red);
+    text-align: center;
+}
+
+.button_reset_form {
+    display: flex;
+}
+
+.button_reset {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth_session_status {
+    text-align: center;
+    padding: 1rem;
+    color: var(--color-dark-red);
+    font-weight: bold;
+}
+
+@media screen and (max-width: 992px) {
+    .form_container {
+      width: 80%;
+    }
+
+    .login_logo_form h1{
+        font-size: 30px;  
+        font-weight: 1200;
+    }
+
+    .login_logo_form h2{
+        font-size: 20px;
+    }
+
+
+    .button_reset {
+        padding: 1rem;
+    }
+  }
+
+  .status-message {
+    color: green;
+    background-color: #f0f0f0;
+    border: 1px solid green;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+

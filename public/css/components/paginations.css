@@ -1,0 +1,19 @@
+/* PAGINATION */
+    .pagination {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .pagination .page-item .page-link {
+        text-decoration: none;
+    }
+
+    .pagination .page-item.active .page-link {
+        background-color: #007bff;
+        color: white;
+        border-radius: 50%;
+        padding: 5px 10px;
+
+    }

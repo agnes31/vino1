@@ -1,0 +1,477 @@
+
+/* GOOGLE FONT */
+/* Libre Baskerville */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+/* Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+:root {
+
+/* COLOR PALETTE */
+    --color-brown: #9B3C18;
+    --color-light-red: #ed4461;
+    --color-rose: #bda7a7;
+    --color-bordeaux: #800020;
+    --color-dark-red: #9B3C18;
+    --color-deep-maroon: #35000C;
+    --color-brown:#56312e;
+    
+    --color-green: #65d3b7;
+
+    --color-black: #000000;
+    --color-grey: grey;
+    --color-light-grey: rgb(193, 193, 193);
+    --color-white: #FFFFFF;
+
+    
+    --color-blue: #46a3f5;
+    --color-dark-blue: #212529;
+    --color-beige: #d3b88c;
+    --color-purpul: #a14f7480;
+
+  
+/* INTERVALS */
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 1.5rem;
+    --spacing-extra-large: 2.5rem;
+    --spacing-double-extra-large: 4rem;
+    --spacing-triple-extra-large: 6rem;
+    --spacing-quadruple-extra-large: 8rem;
+
+/* TEXT SIZE */
+    --font-size-h1: 3.5rem;
+    --font-size-h2: 1.5rem;
+    --font-size-h3: 1.25rem;
+    --font-size-normal: 1rem;
+    --font-size-small: 0.875rem;
+    --font-size-extra-small: 0.5rem;
+}
+
+/* TITLES */
+h1 {
+    font-weight: 700;
+    font-family: 'Roberto', serif;
+    font-size: var(--font-size-h1);
+}
+
+h2 {
+    font-weight: 700;
+    font-family: 'Roberto', serif;
+    font-size: var(--font-size-h2);
+}
+
+h3 {
+    font-weight: 500;
+    color: var(--color-text70);
+    font-size: var(--font-size-h3);
+    letter-spacing: 0.25px;
+}
+
+/* HYPERLINKS */
+
+a {
+    color: var(--color-black);
+    transition: var(--transition);
+}
+
+select {
+    padding: 0.5rem;
+    border: 1px solid #999898;
+    border-radius: 0.5rem;
+    font-size: var(--font-size-normal);
+    z-index: 2;
+}
+
+.cta-link:hover {
+    text-decoration: underline;
+    z-index: 2; 
+ 
+}
+
+.red {
+    background-color: var(--color-light-red);
+    font-weight: 300;
+    font-size: var(--font-size-normal);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.blue {
+    background-color: var(--color-blue);
+    font-weight: 300;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.grey {
+    background-color: var(--color-light-grey);
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: var(--font-size-normal);
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: var(--spacing-medium);
+}
+
+.highlight {
+    text-decoration: underline;
+}
+
+.center {
+    text-align: center;
+}
+
+
+/* STRUCTURE */
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: var(--font-size-normal);
+    letter-spacing: 1px;
+    margin: 0;
+    height: 100%;
+    background-color: var(--color-rose);
+    border-radius: 5px;
+}
+
+header {
+    height: 100px;
+    width: 100vw;
+    left: calc(-50vw + 50%);
+    position: relative;
+    background-image: url('/img/cellars/cellars.jpeg');
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    height: 100vh;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+section {
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+footer {
+    padding: var(--spacing-extra-large) 0;
+    text-align: center;
+    color: var(--color-text70);
+    font-size: var(--font-size-small);
+}
+
+@media (min-width: 700px) {
+    footer {
+        padding: var(--spacing-double-extra-large) 0;
+    }
+}
+
+/* FORM */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+  
+}
+
+.input_contain {
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+
+input,
+textarea {
+    padding: 0.5rem;
+    border: 1px solid #999898;
+    border-radius: 0.5rem;
+    font-size: var(--font-size-normal);
+    z-index: 2;
+}
+
+.input_error {
+    text-align: center;
+    color: var(--color-light-red);
+    font-weight: bold;
+}
+
+.form_cellar {
+    background-color:#452828;
+    /* background-color: #f2f2f2;   */
+    padding: 20px; /* Espace intérieur du formulaire */
+    border-radius: 5px; 
+}
+
+.input_contain input, .input_contain textarea {
+    width: 100%; /* Largeur du champ de saisie */
+    padding: 10px; /* Espace intérieur du champ de saisie */
+    border: 1px solid #ccc; /* Bordure du champ de saisie */
+    border-radius: 4px; /* Coins arrondis du champ de saisie */
+}
+
+/* BUTTONS */
+button, .button {
+    width: max-content;
+    align-self: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: var(--spacing-medium);
+    border-radius: 10px;
+    transition: var(--transition);
+    font-weight: 800;
+    font-size: var(--font-size-h3);
+    text-align: center;
+    color: var(--color-text70);
+    background-color: transparent;
+    border-color: var(--color-grey);
+}
+
+.button-small {
+    font-weight: 300;
+    font-size: var(--h4-font-size);
+}
+
+button:hover, .button:hover {
+    border-color: inherit;
+    color: var(--color-black);
+}
+
+
+/* BUTTONS AJOUTER */
+.add-cellar {
+    display: flex;
+    align-items: center;
+    margin-left: var(--spacing-double-extra-large);
+}
+
+.add-cellar-icon {
+    font-size: 2em;
+    color: var(--color-black);
+}
+
+/* SUMMIT BUTTON */
+
+.submit-button {
+    background-color: var(--color-bordeaux);
+    color: var(--color-white);
+    border-radius: 5px;
+    margin-top: var(--spacing-medium);
+    padding: 10px;
+    border: none;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+
+/* BUTTONS RETOUR */
+.myReturn {
+    /* background-color: var(--color-light-grey); */
+    background-color: rgb(139 25 25);
+    border: none;
+    color: white;
+    padding: 10px 20px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: var(--font-size-normal);
+    margin: 4px 2px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: var(--spacing-small) 
+}
+
+
+.log {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    border-color: var(--color-black);
+    color: var(--color-dark-blue);
+    background-color: var(--color-purpul);
+    z-index: 2;
+}   
+
+
+.warning {
+    border-color: var(--color-yellow);
+    color: var(--color-yellow);
+}
+
+.danger {
+    border-color: var(--color-light-red);
+    color: var(--color-light-red);
+}
+
+.danger:hover {
+    background-color: var(--color-light-red);
+    color: var(--color-white);
+}
+  
+.warning:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-white);
+}
+
+/* ICONS */
+.mail-icon {
+    width: 1.3rem;
+    display: inline;
+    margin-right: 0.3rem;
+    position: relative;
+    top: 3px;
+}
+
+.large-icon {
+    font-size: 1.5em; 
+}
+
+
+
+
+
+/* CELLARS */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+    background-color: var(--color-beige);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.cellar-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: inherit;
+   
+}
+
+.cellar-card h3 {
+    margin-bottom: 10px;
+}
+
+.cellar-card p {
+    margin-bottom: 10px;
+}
+
+.fas {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+
+/* DETAIL CELLAR */
+.wineCellar__detail {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--color-light-pink);
+    padding: var(--spacing-small);
+    border-radius: 10px;
+    gap: 0.5rem;
+    color: black;
+}
+
+.wineCellar__action {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: var(--spacing-medium);
+    margin-top: var(--spacing-extra-large);
+}
+
+
+.contenue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cercle {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #800000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* TABLEAU BOUTEILLES */
+
+.bottle {
+    display: flex;
+    align-items: start;
+    padding: var(--spacing-small);
+}
+
+.bottle-image {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.bottle-description {
+    flex: 2;
+    line-height: 1.2;
+ 
+}
+
+/* SECTION */
+
+.background_show {
+        background-color: initial;
+        border-radius: initial;
+        box-shadow: initial;
+} 
